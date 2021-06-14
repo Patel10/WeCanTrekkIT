@@ -1,0 +1,94 @@
+
+body{
+
+margin:0;
+padding:0;
+background-image: url("/images/lakeView.jpg");
+background-size: cover;
+background-position: center center;
+background-repeat: no-repeat;
+height:100vh;
+}
+
+a{
+font-size: 16px;
+text-transform: uppercase;
+}
+
+
+nav{
+background-color: #7a7979;
+text-align: center
+height: 60px;
+}
+
+
+nav:after{
+content:'';
+clear: both;
+display: block;
+}
+
+nav ul{
+list-style: none;
+margin: 0;
+float: right;
+text-align: center;
+}
+
+nav > ul > li{
+float:left;
+position: relative;
+}
+
+nav ul li a{
+text-decoration: none;
+color: #fff;
+padding: 15px 20px;
+display: block;
+}
+
+
+nav ul li:hover a{
+background: #34495a;
+}
+
+nav ul ul{
+position: absolute;
+padding:0;
+min-width: 160px;
+display: none;
+top: 100%;
+left:0;
+}
+
+nav ul li:hover > ul{
+display: block;
+}
+
+nav ul ul li:hover a{
+background: #262626;
+}
+
+nav ul ul li{
+position: relative;
+}
+
+nav ul ul ul{
+top:0;
+left:100%;
+}
+
+nav ul ul ul li:hover a{
+background: #34495a;}
+
+nav p{
+font-family: 'Dancing Script', cursive;
+font-size: 40px;
+line-height:30px;
+padding-left: 10px;
+float: left;
+color: white;
+text-align: center;
+}
+
