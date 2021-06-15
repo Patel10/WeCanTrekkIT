@@ -15,4 +15,11 @@ public class LandingPageController {
         return "landingpage";
 
     }
+
+    @GetMapping("/contact")
+    public String contact(@RequestParam(name = "contact", required = false, defaultValue = "!") String contact, Model model) {
+        model.addAttribute("contact", contact);
+        return "contactus";
+
+    }
 }
