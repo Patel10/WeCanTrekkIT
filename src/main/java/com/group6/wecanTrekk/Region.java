@@ -24,11 +24,6 @@ public class Region {
         return id;
     }
 
-   // public Collection<Continent> getContinents() {
-    //   return continents;
-  //  }
-
-
     public String getName() {
 
         return name;
