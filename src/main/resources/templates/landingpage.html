@@ -15,6 +15,15 @@
             <li><a href="#"> Home</a></li>
             <li><a href="#"> Service Locations</a>
                 <ul>
+                    <li th:each="Continent: ${ContinentModel}">
+                        <a th:href="'/continents/'+ ${Continent.id}" th:text="${Continent.name}">Africa</a>
+                        <ul>
+                            <li th:each="Region: ${Continent.regions}">
+                                <a th:href="'/regions/'+ ${Region.id}" th:text="${Region.name}">Africa</a>
+                            </li>
+
+                        </ul>
+                    </li>
                     <li><a href="#">Africa</a>
 
                         <ul>

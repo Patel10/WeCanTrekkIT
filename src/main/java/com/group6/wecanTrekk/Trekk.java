@@ -4,6 +4,7 @@ package com.group6.wecanTrekk;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.Lob;
 import java.util.Objects;
 
 @Entity
@@ -20,6 +21,7 @@ public class Trekk {
     private String level;
     private String cost;
     private String img;
+    @Lob
     private String content;
 
 

@@ -16,8 +16,35 @@ public class Populator implements CommandLineRunner {
     @Resource
     private RegionRepository regionRepo;
 
+
     @Override
     public void run(String... args) throws Exception {
+        Continent Africa = new Continent("Africa");
+        continentRepo.save(Africa);
+        continentRepo.save(new Continent("Antarctica"));
+        continentRepo.save(new Continent("Asia"));
+        continentRepo.save(new Continent("Australia"));
+        continentRepo.save(new Continent("Europe"));
+        continentRepo.save(new Continent("North America"));
+        continentRepo.save(new Continent("South America"));
+
+        regionRepo.save(new Region("Northern Africa", "Africa",Africa));
+        regionRepo.save(new Region("Western Africa", "Africa",Africa));
+        regionRepo.save(new Region("Antarctic Peninsula", "Antarctica",Africa));
+        regionRepo.save(new Region("Ross Sea", "Antarctica",Africa));
+        regionRepo.save(new Region("South Asia", "Asia",Africa));
+        regionRepo.save(new Region("East Asia", "Asia",Africa));
+        regionRepo.save(new Region("New South Wales", "Australia",Africa));
+        regionRepo.save(new Region("Victoria", "Australia",Africa));
+        regionRepo.save(new Region("Eastern Europe", "Europe",Africa));
+        regionRepo.save(new Region("Western Europe", "Europe",Africa));
+        regionRepo.save(new Region("Canadian Shield", "North America",Africa));
+        regionRepo.save(new Region("Rocky Mountains", "North America",Africa));
+        regionRepo.save(new Region("Gran Columbia", "South America",Africa));
+        regionRepo.save(new Region("Gaucho", "South America",Africa));
+
+
+
         Trekk africaR1 = new Trekk("Dahab","Egypt","Northern Africa","1","$400","img","Dahab is one of the most rewarding hiking trails in Egypt. " +
                 "Considered a coastal hike, it will take you through the crystal blue waters and Sinai’s mountains, where you’ll be greeted by Bedouins every step of the way. Start your hike at the Blue Hole, a worldwide diving spot, stop for a while at Ras Abu Gallum Protectorate, where you can enjoy an authentic lunch and continue your path as you head towards your final stop, the Blue Lagoon, one of the best kitesurfing spots in Egypt. Learn some new kitesurfing skills while you’re there or just enjoy a swim in the lagoon and spend the night at one of the lagoon’s camps.");
         Trekk africaR2 = new Trekk("Mount Afadja","Ghana","Western Africa","4","$800","img","The highest mountain in West Africa offers spectacular views of both Ghana and Togo from its summit, which is accessed through a dense forest and a four-hour climb, passing three levels of waterfalls along the way. Many visitors hike Afajato and Tagbo falls.");
@@ -32,7 +59,7 @@ public class Populator implements CommandLineRunner {
         Trekk nAmerica = new Trekk("Across the Divide","Colorado","Rocky Mountains","8","$1,530","img","Across the Divide backpack takes us from the rivers that flow east into the Atlantic, to the very headwaters of those that make their way west to the Pacific – and we do it all under our own power! " +
                 "We’ll begin along the waters of the pristine Big Thompson River, follow the drainage up past roaring waterfalls, alpine lakes, and glacial-carved granite cliffs. Then we’ll ascend above the clouds, over the Divide, and down into the river valleys flowing west out of the mountains!");
         Trekk nAmerica2 = new Trekk("Montagne des Érables","Quebec City","Canadian Shield","4","Free","img","With a 2,625-foot vertical drop, this difficult trail in the Charlevoix region’s Parc national des Hautes-Gorges-de-la-Rivière-Malbaie rewards with spectacular peak and valley views. " +
-                "After a day of trekking through forest and alpine terrain on Quebec’s steepest trail, tuck into one of the park’s 10 new sleek Écho cabins, equipped with kitchen, bathroom, wood stove, and plenty of windows – so you can keep ogling those sheer mountain faces.")
+                "After a day of trekking through forest and alpine terrain on Quebec’s steepest trail, tuck into one of the park’s 10 new sleek Écho cabins, equipped with kitchen, bathroom, wood stove, and plenty of windows – so you can keep ogling those sheer mountain faces.");
         Trekk sAmerica = new Trekk("Mount Roraima","Venezuela","Gran Columbia","9","$500","img","Mount Roraima is a spectacular flat table mountain surrounded by sheer cliffs creating an island floating in the sky on the plains of the Gran Sabana (the Great Savannah), a large part of south eastern Venezuela. Hiking on Mount Roraima, surrounded by three different countries; Venezuela, Brazil and Guyana is one of the most unique places");
         Trekk sAmerica2 = new Trekk("Torres del Paine National Park","Chile","Gaucho","3","600","ccc","The W Circuit of Torres del Paine National Park is an easier feat than the full trail, but still demands long days of fairly strenuous hiking. Views of the “torres,” the unique granite mountain peaks in the park, are part of what make this such an attractive destination. This spectacular hike located in Chilean Patagonia attracts around 150,000 visitor each year.");
 

@@ -41,9 +41,10 @@ public class Region {
     protected Region() {
     }
 
-    public Region(String name, String location, Continent...continents) {
+    public Region(String name, String location, Continent continent) {
         this.name = name;
         this.location = location;
+        this.continent = continent;
     }
 
     @Override
