@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" http-equiv="Content-Type" content="text/html">
+    <title>Welcome to We Can Trek</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="" th:href="@{/style.css}">
+</head>
+<body>
+<div class="head">
+    <nav>
+        <p>We Can Trek it!</p>
+        <ul>
+            <li><a href="#"> Home</a></li>
+            <li><a href="#"> Service Locations</a>
+                <ul>
+                    <li><a href="#">Africa</a>
+
+                        <ul>
+                            <li><a href="#">Northern Africa (Morocco/Egypt)</a></li>
+                            <li><a href="#">Western Africa ( Ghana/Ivory Coast)</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Antartica</a>
+                        <ul>
+                            <li><a href="#">Antarctic Peninsula (Falklands/South)</a></li>
+                            <li><a href="#">Ross Sea (Franklin Island/Beaufort Island)</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Asia</a>
+                        <ul>
+                            <li><a href="#">South Asia (Nepal/India)</a></li>
+                            <li><a href="#">East Asia (China/Japan)</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="#">Australia</a>
+                        <ul>
+                            <li><a href="#">New South Wales (New Castle/Western Sydney)</a></li>
+                            <li><a href="#">Victoria (Melbourne/The Victorian Alps)</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Europe</a>
+                        <ul>
+                            <li><a href="#">Eastern Europe (Poland/ Czech Republic)</a></li>
+                            <li><a href="#">Western Europe ( France/Germany)</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">North America</a>
+                        <ul>
+                            <li><a href="#">Canadian Shield (Ontario/Quebec)</a></li>
+                            <li><a href="#">Great Plain (Rocky Mountains (CO. State)/TexaS)</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">South America</a>
+                        <ul>
+                            <li><a href="#">Gran Columbia (Panama/Venezuela)</a></li>
+                            <li><a href="#">Gaucho (Chile/Argentina)</a></li>
+                        </ul>
+                    </li>
+
+                </ul>
+            </li>
+            <li><a href="#"> About</a></li>
+            <li><a th:href="@{contact}"> Contact us </a></li>
+        </ul>
+
+        <!--    <h1 th:text="'We Can Trek ' + ${name}"></h1>-->
+    </nav>
+</div>
+
+
+<!--<h1 th:text="' Hello, ' + ${name}"></h1>-->
+
+<!--<div class="landingbackground">-->
+<!--    <img th:src="@{/images/lakeview.jpg}">-->
+
+
+</body>
+</html>
