@@ -16,8 +16,35 @@ public class Populator implements CommandLineRunner {
     @Resource
     private RegionRepository regionRepo;
 
+
     @Override
     public void run(String... args) throws Exception {
+        Continent Africa = new Continent("Africa");
+        continentRepo.save(Africa);
+        continentRepo.save(new Continent("Antarctica"));
+        continentRepo.save(new Continent("Asia"));
+        continentRepo.save(new Continent("Australia"));
+        continentRepo.save(new Continent("Europe"));
+        continentRepo.save(new Continent("North America"));
+        continentRepo.save(new Continent("South America"));
+
+        regionRepo.save(new Region("Northern Africa", "Africa",Africa));
+        regionRepo.save(new Region("Western Africa", "Africa",Africa));
+        regionRepo.save(new Region("Antarctic Peninsula", "Antarctica",Africa));
+        regionRepo.save(new Region("Ross Sea", "Antarctica",Africa));
+        regionRepo.save(new Region("South Asia", "Asia",Africa));
+        regionRepo.save(new Region("East Asia", "Asia",Africa));
+        regionRepo.save(new Region("New South Wales", "Australia",Africa));
+        regionRepo.save(new Region("Victoria", "Australia",Africa));
+        regionRepo.save(new Region("Eastern Europe", "Europe",Africa));
+        regionRepo.save(new Region("Western Europe", "Europe",Africa));
+        regionRepo.save(new Region("Canadian Shield", "North America",Africa));
+        regionRepo.save(new Region("Rocky Mountains", "North America",Africa));
+        regionRepo.save(new Region("Gran Columbia", "South America",Africa));
+        regionRepo.save(new Region("Gaucho", "South America",Africa));
+
+
+
         Trekk africaR1 = new Trekk("Dahab","Egypt","Northern Africa","1","$400","img","Dahab is one of the most rewarding hiking trails in Egypt. " +
                 "Considered a coastal hike, it will take you through the crystal blue waters and Sinai’s mountains, where you’ll be greeted by Bedouins every step of the way. Start your hike at the Blue Hole, a worldwide diving spot, stop for a while at Ras Abu Gallum Protectorate, where you can enjoy an authentic lunch and continue your path as you head towards your final stop, the Blue Lagoon, one of the best kitesurfing spots in Egypt. Learn some new kitesurfing skills while you’re there or just enjoy a swim in the lagoon and spend the night at one of the lagoon’s camps.");
         Trekk africaR2 = new Trekk("Mount Afadja","Ghana","Western Africa","4","$800","img","The highest mountain in West Africa offers spectacular views of both Ghana and Togo from its summit, which is accessed through a dense forest and a four-hour climb, passing three levels of waterfalls along the way. Many visitors hike Afajato and Tagbo falls.");

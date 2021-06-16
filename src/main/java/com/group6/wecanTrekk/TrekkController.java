@@ -13,11 +13,14 @@ public class TrekkController {
     private ContinentRepository continentRepo;
     @Resource
     private RegionRepository regionRepo;
+    @Resource
+    private TrekkRepository trekkRepo;
 
 
     @RequestMapping("/trekk")
     public String displayAllTrekks (Model model){
-        model.addAttribute("TrekkModel",continentRepo.findAll(),regionRepo.findAll());
+        model.addAttribute("TrekkModel",trekkRepo.findAll());
+        model.addAttribute("RegionsModel",regionRepo.findAll());
         return "TrekkView";
 
     }
