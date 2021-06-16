@@ -7,7 +7,7 @@ import javax.annotation.Resource;
 
 
 @Component
-public class cdPopulator implements CommandLineRunner {
+public class Populator implements CommandLineRunner {
 
     @Resource
     private TrekkRepository trekkRepo;
