@@ -37,6 +37,10 @@ public class Continent {
         return name;
     }
 
+    public Collection<Region> getRegions() {
+        return regions;
+    }
+
     @Override
     public String toString() {
     return String.format("Continent[id=%d, name=%s]", id, name);
