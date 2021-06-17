@@ -34,4 +34,11 @@ public class LandingPageController {
         return "contactus";
 
     }
+
+    @GetMapping("/about")
+    public String about(@RequestParam(name = "about", required = false, defaultValue = "!") String about, Model model) {
+        model.addAttribute("about", about);
+        return "aboutUs";
+
+    }
 }
