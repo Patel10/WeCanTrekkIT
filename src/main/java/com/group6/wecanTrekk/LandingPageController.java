@@ -34,4 +34,12 @@ public class LandingPageController {
         return "contactus";
 
     }
+
+    @GetMapping("/about")
+    public String about( Model model) {
+        model.addAttribute("TrekModel", trekkRepo.findAll());
+        model.addAttribute("ContinentModel", continentRepo.findAll());
+        return "aboutUs";
+
+    }
 }
