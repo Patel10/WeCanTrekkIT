@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+
+    <title>Continents</title>
+</head>
+<body>
+<header>
+    <h1> We Can Trek Continents </h1>
+</header>
+<main>
+
+    <ul>
+
+        <li th:each="continent: ${continentsModel}"><a th:href="@{/continent(id=${continent.id})}"
+                                                       th:text="${continent.name}"></a></li>
+    </ul>
+</main>
+<footer> %copy Stephen, Parth, Orpa, Rochelle</footer>
+</body>
+</html>

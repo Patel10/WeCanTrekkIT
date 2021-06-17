@@ -1,4 +1,4 @@
-package com.group6.wecanTrekk;
+package com.group6.wecanTrekk.models;
 
 
 import javax.persistence.Entity;

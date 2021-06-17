@@ -1,9 +1,10 @@
-package com.group6.wecanTrekk;
+package com.group6.wecanTrekk.controllers;
 
+import com.group6.wecanTrekk.repositories.ContinentRepository;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.annotation.Resource;
 
@@ -17,9 +18,10 @@ public class ContinentController {
         model.addAttribute("continentsModel", continentRepo.findAll());
         return "continentsTemplate";
 }
-@RequestMapping("/continent")
-public String findOneContinent(@RequestParam(value="id")Long id, Model model){
+@RequestMapping("/continent/{id}")
+public String findOneContinent(Model model, @PathVariable Long id){
         model.addAttribute("continentModel", continentRepo.findOne(id));
-        return "reviewTemplate";
+        return "continentTemplate";
 }
 }
+
