@@ -1,4 +1,4 @@
-body{
+/*body{
 margin:0;
 padding:0;
 background-image: url("/images/lakeView.jpg");
@@ -6,9 +6,15 @@ background-size: cover;
 background-position: center center;
 background-repeat: no-repeat;
 height:100vh;
+}*/
+
+
+img {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+  width: 150px;
 }
-
-
 
 a{
 font-size: 16px;
