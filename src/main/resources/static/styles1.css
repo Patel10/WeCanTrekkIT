@@ -43,3 +43,36 @@ box-shadow: 11px 10px 5px -4px rgba(0,0,0,0.53);
   -webkit-box-shadow: 11px 10px 5px -4px rgba(0,0,0,0.53);
   -moz-box-shadow: 11px 10px 5px -4px rgba(0,0,0,0.53);
 }
+
+
+/* trek template css */
+p1{
+margin:0;
+font-family: 'Lucida Handwriting', cursive;
+font-size: 20px;
+line-height:30px;
+padding-left: 20px;
+color: grey;
+text-align: center;
+}
+p2{
+margin:auto;
+font-family: 'Lucida Handwriting', cursive;
+font-size:50px;
+color: grey;
+text-align: center;
+
+}
+p3{
+margin:auto;
+font-size: 100px;
+color: grey;
+text-aling:center;
+}
+
+img{
+display: grid;
+margin: auto;
+width:425px;
+height: 240px;
+}
