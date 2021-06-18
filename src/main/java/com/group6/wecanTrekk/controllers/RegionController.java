@@ -22,6 +22,6 @@ public class RegionController {
     @RequestMapping("/region/{id}")
     public String findOneRegion(Model model, @PathVariable Long id){
         model.addAttribute("regionModel", regionRepo.findAll());
-        return "regionTemplate";
+        return "regionView"; //was regionTemplate
     }
 }

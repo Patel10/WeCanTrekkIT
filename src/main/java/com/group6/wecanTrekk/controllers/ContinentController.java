@@ -3,8 +3,8 @@ package com.group6.wecanTrekk.controllers;
 import com.group6.wecanTrekk.repositories.ContinentRepository;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.annotation.Resource;
 
@@ -18,10 +18,12 @@ public class ContinentController {
         model.addAttribute("continentsModel", continentRepo.findAll());
         return "continentsTemplate";
 }
-@RequestMapping("/continent/{id}")
+@GetMapping ("/continent/{id}")  //changed fromm @RequestMapping
 public String findOneContinent(Model model, @PathVariable Long id){
-        model.addAttribute("continentModel", continentRepo.findOne(id));
-        return "continentTemplate";
+        model.addAttribute("continentModel", continentRepo.findAll());
+        //changed from: continentRepo.findOne(id));
+        return "continentView";
+        //changed from continentTemplate
 }
 }
 

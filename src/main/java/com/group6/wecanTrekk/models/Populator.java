@@ -1,11 +1,8 @@
 package com.group6.wecanTrekk.models;
 
-import com.group6.wecanTrekk.models.Continent;
-import com.group6.wecanTrekk.models.Region;
-import com.group6.wecanTrekk.models.Trekk;
-import com.group6.wecanTrekk.repositories.ContinentRepository;
 import com.group6.wecanTrekk.repositories.RegionRepository;
 import com.group6.wecanTrekk.repositories.TrekkRepository;
+import com.group6.wecanTrekk.repositories.ContinentRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 

@@ -11,5 +11,6 @@ public interface ContinentRepository extends CrudRepository<Continent, Long>{
 
     Continent findById(long id);
 
-    Object findOne(Long id);
+
+    //Object findOne(Long id);
 }
