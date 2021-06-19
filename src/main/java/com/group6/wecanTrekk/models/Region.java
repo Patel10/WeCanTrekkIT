@@ -1,9 +1,6 @@
-package com.group6.wecanTrekk;
+package com.group6.wecanTrekk.models;
 
 import javax.persistence.*;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collection;
 import java.util.Objects;
 
 @Entity
@@ -23,11 +20,6 @@ public class Region {
 
         return id;
     }
-
-   // public Collection<Continent> getContinents() {
-    //   return continents;
-  //  }
-
 
     public String getName() {
 

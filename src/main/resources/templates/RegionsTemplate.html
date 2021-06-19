@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+
+    <title>Regions</title>
+</head>
+<body>
+<header>
+    <h1> We Can Trek Regions </h1>
+</header>
+<main>
+
+    <ul>
+
+        <li th:each="region: ${regionsModel}"><a th:href="@{/region(id=${region.id})}"
+                                                       th:text="${region.name}"></a></li>
+    </ul>
+</main>
+<footer> %copy Stephen, Parth, Orpa, Rochelle</footer>
+</body>
+</html>
+

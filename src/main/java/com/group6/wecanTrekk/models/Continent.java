@@ -1,9 +1,8 @@
-package com.group6.wecanTrekk;
+package com.group6.wecanTrekk.models;
 
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
-import javax.persistence.*;
 import java.util.Collection;
 import java.util.Objects;
 import javax.persistence.Id;
