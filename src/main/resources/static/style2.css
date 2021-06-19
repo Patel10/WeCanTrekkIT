@@ -148,6 +148,10 @@ color: black;
   width: 100%;
 }
 
+.row{
+align right;
+
+}
 .button:hover {
   background-color: #555;
 }
