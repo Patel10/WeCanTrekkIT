@@ -1,9 +1,9 @@
-package com.group6.wecanTrekk;
+package com.group6.wecanTrekk.repositories;
 
-import java.util.Collection;
 import java.util.List;
+
+import com.group6.wecanTrekk.models.Continent;
 import org.springframework.data.repository.CrudRepository;
-import org.springframework.stereotype.Repository;
 
 public interface ContinentRepository extends CrudRepository<Continent, Long>{
 
@@ -11,4 +11,6 @@ public interface ContinentRepository extends CrudRepository<Continent, Long>{
 
     Continent findById(long id);
 
+
+    //Object findOne(Long id);
 }

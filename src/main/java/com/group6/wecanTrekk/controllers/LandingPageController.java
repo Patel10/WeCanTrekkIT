@@ -1,5 +1,8 @@
-package com.group6.wecanTrekk;
+package com.group6.wecanTrekk.controllers;
 
+import com.group6.wecanTrekk.repositories.RegionRepository;
+import com.group6.wecanTrekk.repositories.TrekkRepository;
+import com.group6.wecanTrekk.repositories.ContinentRepository;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -36,9 +39,14 @@ public class LandingPageController {
     }
 
     @GetMapping("/about")
+<<<<<<< HEAD:src/main/java/com/group6/wecanTrekk/LandingPageController.java
     public String about( Model model) {
         model.addAttribute("TrekModel", trekkRepo.findAll());
         model.addAttribute("ContinentModel", continentRepo.findAll());
+=======
+    public String about(@RequestParam(name = "about", required = false, defaultValue = "!") String about, Model model) {
+        model.addAttribute("about", about);
+>>>>>>> 4af9e533775b6cbde943d4baa4adcd10d66bd7a5:src/main/java/com/group6/wecanTrekk/controllers/LandingPageController.java
         return "aboutUs";
 
     }

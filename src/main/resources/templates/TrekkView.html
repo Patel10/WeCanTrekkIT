@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" http-equiv="Content-Type" content="text/html">
+
+    <title>Welcome to We Can Trek</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="" th:href="@{/style.css}">
+</head>
+<body>
+<div th:each="Trekk: ${TrekkModel}">
+    <p th:text="$Trekk.trekkName}"></p>
+</div>
+</body>
+</html>

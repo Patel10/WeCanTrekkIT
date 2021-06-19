@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" http-equiv="Content-Type" content="text/html">
+    <title>Welcome to We Can Trek</title>
+    <link rel="stylesheet" href="styles1.css">
+
+</head>
+<body>
+<h1>Explore Treks</h1>
+<div class="trek">
+        <div th:each="Trekk: ${TrekkModel}">
+    <p2 th:text="${Trekk.trekkName}"></p2>
+    <img th:src="${Trekk.img}"/>
+    <p3 th:text="${Trekk.location}"></p3>
+    <p3 th:text="${Trekk.region}"></p3>
+    <p3 th:text="'Level: ' + ${Trekk.level}"></p3>
+    <p3 th:text="${Trekk.cost}"></p3>
+    <p1 th:text="${Trekk.content}"></p1>
+        </div>
+
+
+
+
+
+</div>
+
+</body>
+</html>

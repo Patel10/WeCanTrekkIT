@@ -1,6 +1,9 @@
-package com.group6.wecanTrekk;
+package com.group6.wecanTrekk.controllers;
 
 
+import com.group6.wecanTrekk.repositories.TrekkRepository;
+import com.group6.wecanTrekk.repositories.ContinentRepository;
+import com.group6.wecanTrekk.repositories.RegionRepository;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -18,9 +21,9 @@ public class TrekkController {
 
 
     @RequestMapping("/trekk")
-    public String displayAllTrekks (Model model){
-        model.addAttribute("TrekkModel",trekkRepo.findAll());
-        model.addAttribute("RegionsModel",regionRepo.findAll());
+    public String displayAllTrekks(Model model) {
+        model.addAttribute("TrekkModel", trekkRepo.findAll());
+        model.addAttribute("RegionsModel", regionRepo.findAll());
         return "TrekkView";
 
     }
