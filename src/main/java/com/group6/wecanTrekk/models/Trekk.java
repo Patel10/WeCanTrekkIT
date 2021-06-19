@@ -36,6 +36,38 @@ public class Trekk {
         this.content = content;
     }
 
+    public Long getId() {
+        return id;
+    }
+
+    public String getTrekkName() {
+        return trekkName;
+    }
+
+    public String getLocation() {
+        return location;
+    }
+
+    public String getRegion() {
+        return region;
+    }
+
+    public String getLevel() {
+        return level;
+    }
+
+    public String getCost() {
+        return cost;
+    }
+
+    public String getImg() {
+        return img;
+    }
+
+    public String getContent() {
+        return content;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
