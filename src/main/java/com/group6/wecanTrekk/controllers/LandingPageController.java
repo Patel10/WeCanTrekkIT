@@ -39,8 +39,14 @@ public class LandingPageController {
     }
 
     @GetMapping("/about")
+<<<<<<< HEAD:src/main/java/com/group6/wecanTrekk/LandingPageController.java
+    public String about( Model model) {
+        model.addAttribute("TrekModel", trekkRepo.findAll());
+        model.addAttribute("ContinentModel", continentRepo.findAll());
+=======
     public String about(@RequestParam(name = "about", required = false, defaultValue = "!") String about, Model model) {
         model.addAttribute("about", about);
+>>>>>>> 4af9e533775b6cbde943d4baa4adcd10d66bd7a5:src/main/java/com/group6/wecanTrekk/controllers/LandingPageController.java
         return "aboutUs";
 
     }
