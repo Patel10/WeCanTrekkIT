@@ -16,13 +16,13 @@ public class ContinentController {
 
     public String findAllContinents(Model model){
         model.addAttribute("continentsModel", continentRepo.findAll());
-        return "continentsTemplate";
+        return "continents";
 }
 @GetMapping ("/continent/{id}")  //changed fromm @RequestMapping
-public String findOneContinent(Model model, @PathVariable Long id){
+public String findOneContinent(Model model){
         model.addAttribute("continentModel", continentRepo.findAll());
         //changed from: continentRepo.findOne(id));
-        return "continentView";
+        return "continentTemplate";
         //changed from continentTemplate
 }
 }

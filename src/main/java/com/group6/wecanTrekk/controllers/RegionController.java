@@ -19,9 +19,20 @@ public class RegionController {
         return "regionsTemplate";
 
     }
-    @RequestMapping("/region/{id}")
-    public String findOneRegion(Model model, @PathVariable Long id){
-        model.addAttribute("regionModel", regionRepo.findAll());
-        return "regionView"; //was regionTemplate
+    @RequestMapping("/region")  //changed from ("/region/{id}")
+    public String displayAllRegions(Model model){
+        model.addAttribute("RegionModel", regionRepo.findAll());
+        //model.addAttribute("ContinentModel", continentRepo.findAll());
+        return "RegionTemplate"; //was regionTemplate
     }
 }
+//old code
+//    @RequestMapping("/region")  //changed from ("/region/{id}")
+//    public String findOneRegion(Model model, @PathVariable Long id){
+//        model.addAttribute("regionModel", regionRepo.findAll());
+//        return "regionView"; //was regionTemplate
+//    @RequestMapping("/trekk")
+//    public String displayAllTrekks(Model model) {
+//        model.addAttribute("TrekkModel", trekkRepo.findAll());
+//        model.addAttribute("RegionsModel", regionRepo.findAll());
+//        return "TrekkView";
