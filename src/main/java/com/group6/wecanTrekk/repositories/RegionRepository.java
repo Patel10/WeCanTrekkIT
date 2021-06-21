@@ -3,6 +3,7 @@ package com.group6.wecanTrekk.repositories;
 import com.group6.wecanTrekk.models.Region;
 import org.springframework.data.repository.CrudRepository;
 
+import java.util.Collection;
 import java.util.List;
 
 
@@ -13,5 +14,4 @@ Region findById(long id);
 
 
 }
-
 

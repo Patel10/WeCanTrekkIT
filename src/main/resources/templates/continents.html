@@ -1,21 +1,42 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
+    <meta charset="UTF-8" http-equiv="Content-Type" content="text/html">
+    <title>Welcome to We Can Trek</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/trekkstyle.css">
 
-    <title>Continents</title>
 </head>
 <body>
-<header>
-    <h1> We Can Trek Continents </h1>
-</header>
-<main>
 
-    <ul>
+<div class="top">
+    <div class="top1">
+        <p> Continents</p>
+        <a th:href="@{wecantrekit}"> HOME</a>
+    </div>
+</div>
 
-        <li th:each="continent: ${continentsModel}"><a th:href="@{/continent(id=${continent.id})}"
-                                                       th:text="${continent.name}"></a></li>
-    </ul>
-</main>
-<footer> %copy Stephen, Parth, Orpa, Rochelle</footer>
+
+<!--<div>th:each="Continent: ${ContinentModel}">-->
+<!--    <a th:href="'/continents/'+ ${Continent.id}" th:text="${Continent.name}"></a>-->
+<!--    <ul>-->
+
+
+<!--        <div>-->
+<!--            <h2 th:text=" 'Continents' + ${Continent.name"></h2>-->
+
+<!--        </div>-->
+</div>
+
+<div th:each="Continent: ${ContinentModel}">
+    <h2 th:text="${Continent.name}"></h2>
+</div>
+
+</div>
 </body>
+<footer>team treak 6 -  Stephen, Parth, Orpa, Rochel </footer>
 </html>
+
+
+
