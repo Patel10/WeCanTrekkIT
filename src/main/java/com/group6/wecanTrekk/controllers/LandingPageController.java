@@ -22,9 +22,8 @@ public class LandingPageController {
     private TrekkRepository trekkRepo;
 
 
-
     @GetMapping("/wecantrekit")
-    public String wecantrekit(@RequestParam(name="name", required = false, defaultValue="world") String name, Model model){
+    public String wecantrekit(@RequestParam(name = "name", required = false, defaultValue = "world") String name, Model model) {
         model.addAttribute("TrekModel", trekkRepo.findAll());
         model.addAttribute("ContinentModel", continentRepo.findAll());
         return "landingpage";
@@ -39,14 +38,9 @@ public class LandingPageController {
     }
 
     @GetMapping("/about")
-<<<<<<< HEAD:src/main/java/com/group6/wecanTrekk/LandingPageController.java
-    public String about( Model model) {
+    public String about(Model model) {
         model.addAttribute("TrekModel", trekkRepo.findAll());
         model.addAttribute("ContinentModel", continentRepo.findAll());
-=======
-    public String about(@RequestParam(name = "about", required = false, defaultValue = "!") String about, Model model) {
-        model.addAttribute("about", about);
->>>>>>> 4af9e533775b6cbde943d4baa4adcd10d66bd7a5:src/main/java/com/group6/wecanTrekk/controllers/LandingPageController.java
         return "aboutUs";
 
     }
