@@ -1,23 +1,26 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
+    <meta charset="UTF-8" http-equiv="Content-Type" content="text/html">
+    <title>Welcome to We Can Trek</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/trekkstyle.css">
 
-    <title th:text="Model.name}"Regions></title>
 </head>
 <body>
-<header>
-    <h1> th:text="${regionsModel.title}">We Can Trek Regions</h1>
-</header>
-<main>
-    <p><a href="/regions">Regions</a></p>
-    <ul>
+
+<div class="top">
+    <div class="top1">
+        <p> We can trek regions</p>
+
+        <a th:href="@{wecantrekit}" > HOME</a>
+    </div>
+</div>
 
 
-        <li th:text="${regionModel.name}"></li>
-        <li th:text="${regionModel.regions}"></li> //should this be regionModel.continent?
-    </ul>
-    <h2> th:text="${regionModel.regions}"</h2>
-</main>
+<!--        <li th:text="${regionModel.name}"></li>-->
+<!--        <li th:text="${regionModel.regions}"></li> //should this be regionModel.continent?-->
 
 <footer> %copy Stephen, Parth, Orpa, Rochelle</footer>
 </body>

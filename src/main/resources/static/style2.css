@@ -1,13 +1,29 @@
-/*body{
+.top1{
+display: flex;
+justify-content: space-between;
 margin:0;
 padding:0;
-background-image: url("/images/lakeView.jpg");
-background-size: cover;
-background-position: center center;
-background-repeat: no-repeat;
-height:100vh;
-}*/
+border-line: 6px;
+border-color: black;
+background-color: grey;
+width: 100%
+height: 60px;
+box-shadow: 11px 10px 5px -4px rgba(0,0,0,0.53);
+-webkit-box-shadow: 11px 10px 5px -4px rgba(0,0,0,0.53);
+-moz-box-shadow: 11px 10px 5px -4px rgba(0,0,0,0.53);
+}
 
+
+.top1 p{
+margin:0;
+font-family: 'Dancing Script', cursive;
+font-size: 40px;
+line-height:60px;
+padding-left: 20px;
+color: white;
+text-align: center;
+
+}
 
 img {
   border: 1px solid #ddd;
@@ -17,10 +33,11 @@ img {
 }
 
 a{
-font-size: 16px;
-text-transform: uppercase;
+float: right;
+padding: 20px;
+text-decoration: none;
+color: white;
 }
-
 
 nav{
 background-color: #7a7979;
@@ -90,15 +107,7 @@ left:100%;
 nav ul ul ul li:hover a{
 background: #34495a;}
 
-nav p{
-font-family: 'Dancing Script', cursive;
-font-size: 40px;
-line-height:20px;
-padding-left: 20px;
-float: left;
-color: white;
-text-align: center;
-}
+
 .column {
   float: left;
   width: 33.3%;

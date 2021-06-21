@@ -3,20 +3,30 @@
 <head>
     <meta charset="UTF-8" http-equiv="Content-Type" content="text/html">
     <title>Welcome to We Can Trek</title>
-    <link rel="stylesheet" href="styles1.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/trekkstyle.css">
 
 </head>
 <body>
-<h1>Explore Treks</h1>
+
+<div class="top">
+    <div class="top1">
+        <p>Explore Trek</p>
+
+        <a th:href="@{wecantrekit}" > HOME</a>
+    </div>
+</div>
+
 <div class="trek">
-        <div th:each="Trekk: ${TrekkModel}">
-    <p2 th:text="${Trekk.trekkName}"></p2>
+    <div th:each="Trekk: ${TrekkModel}">
+    <h2 th:text="${Trekk.trekkName}"> </h2>
+    <p th:text="'Location: ' + ${Trekk.location}">
+     <p th:text="'Region: ' +${Trekk.region}"></p>
     <img th:src="${Trekk.img}"/>
-    <p3 th:text="${Trekk.location}"></p3>
-    <p3 th:text="${Trekk.region}"></p3>
-    <p3 th:text="'Level: ' + ${Trekk.level}"></p3>
-    <p3 th:text="${Trekk.cost}"></p3>
-    <p1 th:text="${Trekk.content}"></p1>
+     <p th:text="'Level: ' + ${Trekk.level}"></p>
+    <p th:text="'Cost: ' + ${Trekk.cost}"></p>
+    <p th:text="${Trekk.content}"></p>
         </div>
 
 
