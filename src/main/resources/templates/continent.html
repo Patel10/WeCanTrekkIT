@@ -2,21 +2,21 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
 
-    <title th:text="Model.name}"Continents></title>
+    <title>Continents</title>
 </head>
 <body>
 <header>
-    <h1> th:text="${continentsModel.title}">We Can Trek Continents</h1>
+    <h1 th:text="${ContinentModel.name}">We Can Trek Continents</h1>
 </header>
 <main>
     <p><a href="/continents">Continents</a></p>
     <ul>
 
 
-        <li th:text="${continentModel.name}"></li>
-       <li th:text="${continentModel.regions}"></li>
+
+       <li th:each="Region: ${ContinentModel.regions}" th:text="${Region.name}"></li>
             </ul>
-   <h2> th:text="${continentModel.regions}"</h2>
+
 </main>
 
     <footer> %copy Stephen, Parth, Orpa, Rochelle</footer>
