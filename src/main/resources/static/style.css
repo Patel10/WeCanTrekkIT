@@ -33,7 +33,7 @@ display: block;
 nav ul{
 list-style: none;
 float: right;
-text-align: center;
+text-align: left;
 height: 60px;
 }
 

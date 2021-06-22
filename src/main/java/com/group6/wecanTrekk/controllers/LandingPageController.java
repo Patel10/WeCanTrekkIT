@@ -6,6 +6,8 @@ import com.group6.wecanTrekk.repositories.ContinentRepository;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.annotation.Resource;
@@ -38,10 +40,32 @@ public class LandingPageController {
     }
 
     @GetMapping("/about")
-    public String about(Model model) {
-        model.addAttribute("TrekModel", trekkRepo.findAll());
-        model.addAttribute("ContinentModel", continentRepo.findAll());
+    public String about(@RequestParam(name = "about", required = false, defaultValue = "!") String about, Model model) {
+        model.addAttribute("about", about);
         return "aboutUs";
+    }
+
+    @GetMapping("/continents")  //changed fromm @RequestMapping
+    public String findOneContinent(Model model) {
+        model.addAttribute("continentModel", continentRepo.findAll());
+        //changed from: continentRepo.findOne(id));
+        return "continents";
+        //changed from continentTemplate
+    }
+
+    @RequestMapping("/region")  //changed from ("/region/{id}")
+    public String displayAllRegions(Model model){
+        model.addAttribute("RegionModel", regionRepo.findAll());
+        //model.addAttribute("ContinentModel", continentRepo.findAll());
+        return "region"; //was regionTemplate
+    }
+
+    @RequestMapping("/trekk")
+    public String displayAllTrekks(Model model) {
+        model.addAttribute("TrekkModel", trekkRepo.findAll());
+//        model.addAttribute("RegionsModel", regionRepo.findAll());
+        return "TrekView";
 
     }
+
 }

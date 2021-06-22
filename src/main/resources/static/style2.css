@@ -1,3 +1,4 @@
+
 /body{
 margin:0;
 padding:0;
@@ -9,6 +10,19 @@ height:100vh;
 }
 
 
+
+
+.top1 p{
+margin:0;
+font-family: 'Dancing Script', cursive;
+font-size: 40px;
+line-height:60px;
+padding-left: 20px;
+color: white;
+text-align: center;
+
+}
+
 img {
   border: 1px solid #ddd;
   border-radius: 4px;
@@ -17,10 +31,11 @@ img {
 }
 
 a{
-font-size: 16px;
-text-transform: uppercase;
+float: right;
+padding: 20px;
+text-decoration: none;
+color: white;
 }
-
 
 nav{
 background-color: #7a7979;
@@ -90,15 +105,7 @@ left:100%;
 nav ul ul ul li:hover a{
 background: #34495a;}
 
-nav p{
-font-family: 'Dancing Script', cursive;
-font-size: 40px;
-line-height:20px;
-padding-left: 20px;
-float: left;
-color: white;
-text-align: center;
-}
+
 .column {
   float: left;
   width: 33.3%;

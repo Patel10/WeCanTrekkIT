@@ -12,28 +12,16 @@
 
 <div class="top">
     <div class="top1">
-        <p>Explore Trek</p>
+        <p> We can trek regions</p>
 
         <a th:href="@{wecantrekit}" > HOME</a>
     </div>
 </div>
 
-<div class="trek">
-    <div th:each="Trekk: ${TrekkModel}">
-    <h2 th:text="${Trekk.trekkName}"> </h2>
-    <p th:text="'Location: ' + ${Trekk.location}">
-     <p th:text="'Region: ' +${Trekk.region}"></p>
-    <img th:src="${Trekk.img}"/>
-     <p th:text="'Level: ' + ${Trekk.level}"></p>
-    <p th:text="'Cost: ' + ${Trekk.cost}"></p>
-    <p th:text="${Trekk.content}"></p>
-        </div>
 
+<!--        <li th:text="${regionModel.name}"></li>-->
+<!--        <li th:text="${regionModel.regions}"></li> //should this be regionModel.continent?-->
 
-
-
-
-</div>
-
+<footer> %copy Stephen, Parth, Orpa, Rochelle</footer>
 </body>
 </html>
