@@ -5,14 +5,15 @@
     <title>Welcome to We Can Trek</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="" th:href="@{/styles1.css}">
+    <link rel="stylesheet" href="styles1.css">
 </head>
 <body>
 <div class="top">
-       <div class="top1">
-           <p>Contact Us</p>
-
-    <a th:href="@{wecantrekit}" > HOME</a>
+    <div class="top1">
+        <p>Contact Us</p>
+        <div class="home">
+            <a th:href="@{wecantrekit}"> HOME</a>
+        </div>
     </div>
 </div>
 
@@ -21,9 +22,31 @@
         <img src="/images/MontainView.jpg" alt="contactdesign" style="width:100%">
     </div>
     <div class="box">
-        <img src="/images/contactus2.png" alt="contactdesign2" style="width:100%">
+
+        <div class="box1">
+            <div class="logo1">
+
+                <a href="http://maps.google.com/maps?q=210+Louise+Ave,+Nashville,+TN+37203">
+                    <img src="images/address.png" alt="addresslogo" class="logo"> 210 Loiuse Avenue
+                    Nashville, TN 72030</a>
+            </div>
+            <div class="logo2">
+                <a href="mailto:someone@yoursite.com">
+                    <img src="images/mail.png" alt="githublogo" class="logo">contactus@wecantrekit.com</a>
+            </div>
+            <div class="logo3">
+                <a href="tel:1110001010">
+                    <img src="images/phone.png" alt="phonelogo" class="logo"> 111-000-1010</a>
+            </div>
+
+            <div class="logo4">
+                <a href="https://www.facebook.com/">
+                    <img src="images\facebooklogo.jpg" alt="facebooklogo" class="logo">www.facebook.com</a>
+
+
+            </div>
+        </div>
     </div>
 </div>
-<footer><a th:href="@{wecantrekit}" > HOME</a></footer>
 </body>
 </html>

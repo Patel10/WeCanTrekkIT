@@ -58,7 +58,7 @@ public class LandingPageController {
 
     }
 
-    @RequestMapping("/region")
+    @RequestMapping("/regions")  //changed from ("/region/{id}")
     public String displayAllRegions(Model model){
         model.addAttribute("RegionModel", regionRepo.findAll());
 

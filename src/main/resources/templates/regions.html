@@ -1,29 +1,33 @@
 <!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
+
 <head>
     <meta charset="UTF-8" http-equiv="Content-Type" content="text/html">
-
     <title>Welcome to We Can Trek</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./region.css">
-    <head>
+    <link rel="stylesheet" href="/region.css">
 
-        <title> We Can Trek It Explorable Regions</title>
-    </head>
+</head>
+
 <body>
-<header>
-    <h1> We Can Trek It Regions </h1>
-</header>
-<main>
 
-    <div
-        th:each="region: ${RegionModel}"><a th:href="'/regions/' + ${region.id}"
-                                             th:text="${region.name}"></a>
+    <div class="top">
+        <div class="top1">
+            <p> We can trek regions</p>
+
+            <a th:href="@{wecantrekit}"> HOME</a>
+        </div>
     </div>
+    <main>
 
-</main>
-<footer></footer>
+        <div th:each="region: ${RegionModel}"><a th:href="'/regions/' + ${region.id}" th:text="${region.name}"></a>
+        </div>
+
+    </main>
+    <footer></footer>
 </body>
-</html>
 
+</html>
