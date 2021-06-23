@@ -49,13 +49,13 @@ public class Populator implements CommandLineRunner {
 
 
 
-//follow line 56 example
+
         regionRepo.save(new Region("Northern Africa", "Africa",   "/images/africa elephant.jpg",
                 "Come along with us and explore the untamed regions of Egypt.", Africa));
         regionRepo.save(new Region("Western Africa", "Africa",   "/images/africa plains.jpg",
                 "Put an African Trek to Ghana on your bucket list!.", Africa));
         regionRepo.save(new Region("Antarctic Peninsula", "Antarctica",   "/images/Antarctica.jpg",
-                "Antarctica is a beautiful mostly unexplored continent.", Antarctica));
+                "Antarctic is a beautiful mostly unexplored continent. The Faulkland ", Antarctica));
         regionRepo.save(new Region("Ross Sea", "Antarctica", "/images/antarctica region1.jpg",
                 "Make Antarctica your last frontier", Antarctica));
         regionRepo.save(new Region("South Asia", "Asia", "/images/asia region1.jpg",
