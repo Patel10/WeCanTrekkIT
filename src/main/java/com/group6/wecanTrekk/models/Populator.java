@@ -22,36 +22,62 @@ public class Populator implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        Continent Africa = new Continent("Africa");
+        Continent Africa = new Continent("Africa", "/static/images/Africa.jpg", "Africa is the world's second-largest and second-most populous continent. It covers 6% of Earth's total surface area and 20% of its land area. \n" +
+                "Trek Options: West & North Africa.\n");
+                Continent Antarctica = new Continent("Antarctica", "static/images/Antarctica.jpg", "Antarctica is Earth's southernmost continent. It contains the geographic South Pole and is situated in the Antarctic region of the Southern Hemisphere.  \n" +
+                "Trek Options: Antarctica Peninsula & The Ross Sea!\n");
+        Continent Asia = new Continent("Asia", "static/images/Asia.jpg", "Asia is the largest continent on Earth. It covers 9% of the Earth's total surface area (or 30% of its land area), and has the longest coastline. \n" +
+                "Trek Options: South & East Asia!\n");
+        Continent Australia = new Continent("Australia", "static/images/Australia.jpg", "Asia is the largest continent on Earth. It covers 9% of the Earth's total surface area (or 30% of its land area), and has the longest coastline. \n" +
+                "Trek Options: South & East Asia!\n");
+        Continent Europe = new Continent("Europe", "static/images/Europe.jpg", "Europe is a continent located entirely in the Northern Hemisphere and mostly in the Eastern Hemisphere. \n" +
+                "Trek Options: Eastern & Western Europe!\n");
+        Continent NorthAmerica = new Continent("North America", "static/images/North America.jpg", "North America is a continent entirely within the Northern Hemisphere and almost all within the Western Hemisphere.\n" +
+                "Trek Options: Canadian Shield & The Rocky Mountains!\n");
+        Continent SouthAmerica = new Continent("South America", "static/images/South America.jpg", "North America is a continent entirely within the Northern Hemisphere and almost all within the Western Hemisphere.\n" +
+                "Trek Options: Canadian Shield & The Rocky Mountains!\n");
+
+
         continentRepo.save(Africa);
-        Continent Antarctica = new Continent("Antarctica");
         continentRepo.save(Antarctica);
-        Continent Asia = new Continent("Asia");
         continentRepo.save(Asia);
-        Continent Australia = new Continent("Australia");
         continentRepo.save(Australia);
-        Continent Europe = new Continent("Europe");
         continentRepo.save(Europe);
-        Continent NorthAmerica = new Continent("North America");
         continentRepo.save(NorthAmerica);
-        Continent SouthAmerica = new Continent("South America");
         continentRepo.save(SouthAmerica);
 
 
-        regionRepo.save(new Region("Northern Africa", "Africa", Africa));
-        regionRepo.save(new Region("Western Africa", "Africa", Africa));
-        regionRepo.save(new Region("Antarctic Peninsula", "Antarctica", Antarctica));
-        regionRepo.save(new Region("Ross Sea", "Antarctica", Antarctica));
-        regionRepo.save(new Region("South Asia", "Asia", Asia));
-        regionRepo.save(new Region("East Asia", "Asia", Asia));
-        regionRepo.save(new Region("New South Wales", "Australia", Australia));
-        regionRepo.save(new Region("Victoria", "Australia", Australia));
-        regionRepo.save(new Region("Eastern Europe", "Europe", Europe));
-        regionRepo.save(new Region("Western Europe", "Europe", Europe));
-        regionRepo.save(new Region("Canadian Shield", "North America", NorthAmerica));
-        regionRepo.save(new Region("Rocky Mountains", "North America", NorthAmerica));
-        regionRepo.save(new Region("Gran Columbia", "South America", SouthAmerica));
-        regionRepo.save(new Region("Gaucho", "South America", SouthAmerica));
+
+
+
+        regionRepo.save(new Region("Northern Africa", "Africa",   "/images/africa elephant.jpg",
+                "Come along with us and explore the untamed regions of Egypt.", Africa));
+        regionRepo.save(new Region("Western Africa", "Africa",   "/images/africa plains.jpg",
+                "Put an African Trek to Ghana on your bucket list!.", Africa));
+        regionRepo.save(new Region("Antarctic Peninsula", "Antarctica",   "/images/Antarctica.jpg",
+                "Antarctic is a beautiful mostly unexplored continent. The Faulkland ", Antarctica));
+        regionRepo.save(new Region("Ross Sea", "Antarctica", "/images/antarctica region1.jpg",
+                "Make Antarctica your last frontier", Antarctica));
+        regionRepo.save(new Region("South Asia", "Asia", "/images/asia region1.jpg",
+                "At We Can Trek It - We're not all about the Benjamins' You can afford us!", Asia));
+        regionRepo.save(new Region("East Asia", "Asia", "/images/asia region2.jpg",
+                "Come home to Asia - We miss you - Kashmir Valley!", Asia));
+        regionRepo.save(new Region("New South Wales", "Australia", "/images/australia region1.jpg",
+                "Go wild about Australia - Kiss a kangaroo or two!", Australia));
+        regionRepo.save(new Region("Victoria", "Australia", "/images/australia region1.jpg",
+                "Don't regret no taking the Plunge!", Australia));
+        regionRepo.save(new Region("Eastern Europe", "Europe", "/images/europe region1.jpg",
+                "Enjoy the old world charm!", Europe));
+        regionRepo.save(new Region("Western Europe", "Europe", "/images/europe region2jpg.jpg",
+                "Now's the time to believe the best is for you!",  Europe));
+        regionRepo.save(new Region("Canadian Shield", "North America", "/images/north america region1.jpg",
+                "Don't life get in the way of having fun!", NorthAmerica));
+        regionRepo.save(new Region("Rocky Mountains", "North America", "/images/north america region2.jpg",
+                "The Rocky Mountains is not just for 'John Denver'", NorthAmerica));
+        regionRepo.save(new Region("Gran Columbia", "South America", "/images/south america region1.jpg",
+                " Find love! Love of the Trek in Gran Columbia!", SouthAmerica));
+        regionRepo.save(new Region("Gaucho", "South America", "/images/south america region2.jpg",
+                " Don't be a 'Groucho' - Come to Gaucho for the time of a lifetime!", SouthAmerica));
 
 
         Trekk africaR1 = new Trekk("Dahab", "Egypt", "Northern Africa", "1", "$400", "/images/Blue Lagoon Dahab.jpg", "Dahab is one of the most rewarding hiking trails in Egypt. " +
@@ -90,5 +116,5 @@ public class Populator implements CommandLineRunner {
 
     }
 
-    }
+}
 

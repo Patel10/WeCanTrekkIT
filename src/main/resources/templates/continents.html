@@ -2,31 +2,21 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8" http-equiv="Content-Type" content="text/html">
+
     <title>Welcome to We Can Trek</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/trekkstyle.css">
-
+    <link rel="stylesheet" href="" th:href="@{/continent.css}">
 </head>
 <body>
 
 <div class="top">
     <div class="top1">
-        <p> Continents</p>
         <a th:href="@{wecantrekit}"> HOME</a>
     </div>
 </div>
 
 
-<!--<div>th:each="Continent: ${ContinentModel}">-->
-<!--    <a th:href="'/continents/'+ ${Continent.id}" th:text="${Continent.name}"></a>-->
-<!--    <ul>-->
-
-
-<!--        <div>-->
-<!--            <h2 th:text=" 'Continents' + ${Continent.name"></h2>-->
-
-<!--        </div>-->
 </div>
 
 <div th:each="Continent: ${ContinentModel}">
@@ -35,8 +25,14 @@
 
 </div>
 </body>
-<footer>team treak 6 -  Stephen, Parth, Orpa, Rochel </footer>
+<footer></footer>
 </html>
+
+
+
+
+
+
 
 
 

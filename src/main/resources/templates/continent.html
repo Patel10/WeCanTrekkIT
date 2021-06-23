@@ -1,24 +1,26 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
+    <meta charset="UTF-8" http-equiv="Content-Type" content="text/html">
 
-    <title>Continents</title>
+    <title>Welcome to We Can Trek</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="" th:href="@{/continent.css}">
 </head>
 <body>
 <header>
-    <h1 th:text="${ContinentModel.name}">We Can Trek Continents</h1>
+    <h1 th:text="${ContinentModel.name}">We Can Trek It Explorable Continents</h1>
 </header>
 <main>
+    <div>
     <p><a href="/continents">Continents</a></p>
-    <ul>
 
+        th:each="Region: ${ContinentModel.regions}" th:text="${Region.name}">
 
-
-       <li th:each="Region: ${ContinentModel.regions}" th:text="${Region.name}"></li>
-            </ul>
-
+    </div>
 </main>
 
-    <footer> %copy Stephen, Parth, Orpa, Rochelle</footer>
+<footer></footer>
 </body>
 </html>
