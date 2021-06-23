@@ -9,7 +9,37 @@
 </head>
 
 <body>
-<div class="top">
+<div class="head">
+    <nav>
+        <p>We Can Trek it!</p>
+        <ul>
+            <li><a href="#"> Home</a></li>
+            <li><a href="#"> Service Locations</a>
+                <ul>
+                    <li th:each="Continent: ${ContinentModel}">
+                        <a th:href="'/continents/'+ ${Continent.id}" th:text="${Continent.name}"></a>
+                        <ul>
+                            <li th:each="Region: ${Continent.regions}">
+                                <a th:href="'/regions/'+ ${Region.id}" th:text="${Region.name}"></a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+
+            <li><a href="#"> SEARCH BY</a>
+                <ul>
+                    <li><a th:href="@{continents}"> CONTINENTS </a></li>
+                    <li><a th:href="@{region}"> REGIONS </a></li>
+                    <li><a th:href="@{trekk}"> TREK </a></li>
+                </ul>
+
+            <li><a th:href="@{about}"> About us </a></li>
+            <li><a th:href="@{contact}"> Contact us </a></li>
+
+        </ul>
+
+
+    </nav>
     <div class="top1">
         <p>About Us</p>
 
@@ -27,10 +57,11 @@
             <div class="card">
                 <div class="container">
                     <h2> Meet Orpa Jackson </h2>
+                    <a href="https://www.linkedin.com/in/orpa-jackson-a5b5a7ab/">
                     <img src="/images/orpa1.jpg" />
                     <p class="title"> Front End coder</p>
-                    <p>Hi! Orpa here, I join the team as a front end coder, working with talented developers team. Love travel, watching movies and spend time with family".</p>
 
+                    <p>Hi! Orpa here, I join the team as a front end coder, working with talented developers team. Love travel, watching movies and spend time with family".</p>
                     <p>@example.com</p>
                     <p>
                         <button class="button">Contact</button>
@@ -44,6 +75,7 @@
             <div class="card">
                 <div class="container">
                     <h2> Meet Stephen Fafiade </h2>
+                    <a href="https://www.linkedin.com/in/stephen-fafiade-b87965105/">
                     <img src="/images/portoilio.jpg" />
                     <p class="title">Css/Html Stylist</p>
                     <p>Hello ! Stephen here, I am  working with a talented team of developers.Currenty working on the html css/ html development . Love video games,family, going to the movies and watching sports "..</p>
@@ -60,7 +92,8 @@
             <div class="card">
                 <div class="container">
                     <h2> Meet Parth Patel </h2>
-                    <img src="paris.jpg" alt="Paris" class="right">
+                    <img src="/images/parth.jpg" />
+                    <a href="https://www.linkedin.com/in/parth1029/">
                     <p class="title">BackEnd Coder</p>
                     <p> Hi Parth here. Currenty working on back-end development, with goal to delivery user friendly application. My background includes Business Admininstration along with interest in Finance. </p>
                     <p>@example.com</p>
@@ -76,6 +109,7 @@
             <div class="card">
                 <div class="container">
                     <h2> Meet Rochelle Dishmon </h2>
+                    <a href="https://www.linkedin.com/in/rochelle-dishmon/">
                     <img src="/images/Bus pic.jpg" />
                     <p class="title">Back End Coder</p>
                     <p>Conscious Coder" For the love of travel & spurred by Jackr's high Social Responsibility standands, Rochelle joined our team as a backend java coder. in addition to volunteering she is an avid kayaker and hiker.</p>
