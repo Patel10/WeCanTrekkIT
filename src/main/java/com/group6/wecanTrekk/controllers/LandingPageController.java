@@ -46,24 +46,36 @@ public class LandingPageController {
     }
 
     @GetMapping("/continents")  //changed fromm @RequestMapping
-    public String findOneContinent(Model model) {
-        model.addAttribute("continentModel", continentRepo.findAll());
-        //changed from: continentRepo.findOne(id));
-        return "continents";
-        //changed from continentTemplate
+    public String findAllContinent(Model model) {
+        model.addAttribute("ContinentModel", continentRepo.findAll());
+                return "continents";
+
+    }
+    @GetMapping("/continents/{id}")  //changed fromm @RequestMapping
+    public String findOneContinent(Model model, @PathVariable Long id) {
+        model.addAttribute("ContinentModel", continentRepo.findById(id).get());
+        return "continent";
+
     }
 
-    @RequestMapping("/region")  //changed from ("/region/{id}")
+    @RequestMapping("/regions")  //changed from ("/region/{id}")
     public String displayAllRegions(Model model){
         model.addAttribute("RegionModel", regionRepo.findAll());
-        //model.addAttribute("ContinentModel", continentRepo.findAll());
-        return "region"; //was regionTemplate
+
+        return "regions";
     }
+    @RequestMapping("/regions/{id}")
+    public String displayOneRegion(Model model,@PathVariable Long id){
+        model.addAttribute("RegionModel", regionRepo.findById(id).get());
+        return "region";
+
+    }
+
 
     @RequestMapping("/trekk")
     public String displayAllTrekks(Model model) {
         model.addAttribute("TrekkModel", trekkRepo.findAll());
-//        model.addAttribute("RegionsModel", regionRepo.findAll());
+
         return "TrekView";
 
     }
