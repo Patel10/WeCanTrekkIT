@@ -16,18 +16,14 @@
 
     <div class="top">
         <div class="top1">
-            <p> We can trek regions</p>
-
-            <a th:href="@{wecantrekit}"> HOME</a>
+            <p> We Can Trek It Regions</p>
+            <a class="home" th:href="@{wecantrekit}"> HOME</a>
         </div>
     </div>
-    <main>
+    <div th:each="region: ${RegionModel}"><a th:href="'/regions/' + ${region.id}" th:text="${region.name}"></a></div>
 
-        <div th:each="region: ${RegionModel}"><a th:href="'/regions/' + ${region.id}" th:text="${region.name}"></a>
-        </div>
 
-    </main>
-    <footer></footer>
+<!--    <footer></footer>-->
 </body>
 
 </html>

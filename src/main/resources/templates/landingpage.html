@@ -16,7 +16,7 @@
             <li><a href="#"> Service Locations</a>
                 <ul>
                     <li th:each="Continent: ${ContinentModel}">
-                        <a th:href="'/continents/'+ ${Continent.id}" th:text="${Continent.name}"></a>
+                       <a th:href="@{wecantrekit}" th:text="${Continent.name}"></a>
                         <ul>
                             <li th:each="Region: ${Continent.regions}">
                                 <a th:href="'/regions/'+ ${Region.id}" th:text="${Region.name}"></a>

@@ -12,18 +12,22 @@
 
 <div class="top">
     <div class="top1">
-        <h1> Explore We Can Trek It Regions</h1>
+        <p> Explore We Can Trek It Regions</p>
 
-        <a th:href="@{./wecantrekit}"> HOME</a>
+        <a class="home" th:href="@{/wecantrekit}"> HOME</a>
     </div>
-    <h2 th:text="${RegionModel.name}"> </h2>
-    <p th:text="'Location: ' + ${RegionModel.location}">
-    <p th:text="'Content: ' +${RegionModel.content}"></p>
-    <img th:src="${RegionModel.img}"/>
-        <p th:text="'Continent: ' + ${RegionModel.continent.name}"></p>
+<!--    <h2 th:text="${RegionModel.name}"> </h2>-->
+<!--    <p th:text="${RegionModel.location}"></p>-->
+<!--    <p th:text="${RegionModel.content}"></p>-->
+<!--    <img th:src="${RegionModel.img}"/>-->
 
+    <div th:each="Region: ${RegionModel}">
+        <h2 th:text="${Region.name}"></h2>
+        <p th:text="${Region.location}"></p>
+        <img th:src="${Region.img}"/>
+        <p th:text="${Region.content}"></p>
+    </div>
 </div>
-
 
 </body>
 </html>

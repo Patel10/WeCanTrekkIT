@@ -12,6 +12,7 @@
 
 <div class="top">
     <div class="top1">
+        <p> We Can Trek It Continents</p>
         <a th:href="@{wecantrekit}"> HOME</a>
     </div>
 </div>
@@ -21,6 +22,8 @@
 
 <div th:each="Continent: ${ContinentModel}">
     <h2 th:text="${Continent.name}"></h2>
+    <p th:text="${Continent.content}"></p>
+    <img th:src="${Continent.img}"/>
 </div>
 
 </div>

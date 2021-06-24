@@ -63,7 +63,7 @@ public class Region {
     protected Region() {
     }
 
-    public Region(String name, String location, String img, String content, Continent continent) {
+    public Region(String name, String location,  String img, String content, Continent continent) {
         this.name = name;
         this.location = location;
         this.img = img;
