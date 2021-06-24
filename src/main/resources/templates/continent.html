@@ -15,10 +15,22 @@
 <main>
     <div>
     <p><a href="/continents">Continents</a></p>
+        <th:each="Region: ${ContinentModel.regions}" th:text="${Region.name}">
 
-        th:each="Region: ${ContinentModel.regions}" th:text="${Region.name}">
 
-    </div>
+        <!--h1> Explore We Can Trek It Regions</h1>-->
+
+<!--        <a th:href="@{./wecantrekit}"> HOME</a>-->
+<!--        <h2 th:text="${ContinentModel.name}"> </h2>-->
+<!--        <p th:text="${ContinentModel.location}"></p>-->
+
+<!--    </div>-->
+<!--    <h2 th:text="${RegionModel.name}"> </h2>-->
+<!--    <p th:text="${RegionModel.location}"></p>-->
+<!--    <p th:text="${RegionModel.content}"></p>-->
+<!--    <img th:src="${RegionModel.img}"/>-->
+
+<!--    </div>-->
 </main>
 
 <footer></footer>

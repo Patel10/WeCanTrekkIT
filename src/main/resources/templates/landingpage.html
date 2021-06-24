@@ -5,7 +5,7 @@
     <title>Welcome to We Can Trek</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="" th:href="@{/style2.css}">
+    <link rel="stylesheet" href="" th:href="@{/style.css}">
 </head>
 <body>
 <div class="head">
@@ -16,7 +16,7 @@
             <li><a href="#"> Service Locations</a>
                 <ul>
                     <li th:each="Continent: ${ContinentModel}">
-                        <a th:href="'/continents/'+ ${Continent.id}" th:text="${Continent.name}"></a>
+                       <a th:href="@{wecantrekit}" th:text="${Continent.name}"></a>
                         <ul>
                             <li th:each="Region: ${Continent.regions}">
                                 <a th:href="'/regions/'+ ${Region.id}" th:text="${Region.name}"></a>
